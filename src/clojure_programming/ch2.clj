@@ -11,7 +11,7 @@
 ((multiplier 0.3) 100) ; => 30.0
 
 
-(doc rand-int)
+;;(doc rand-int)
 
 (map inc [1 2 3 4])
 
@@ -26,7 +26,7 @@
  [1 2 3 4])
 
 
-(-> v z/vector-zip z/down z/node)
-(-> v z/vector-zip)
+;; (-> v z/vector-zip z/down z/node)
+;; (-> v z/vector-zip)
 
 
