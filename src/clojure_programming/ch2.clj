@@ -25,8 +25,11 @@
  {}
  [1 2 3 4])
 
+(require '[clojure.zip :as z])
+(def v [[3 4 5] 4 [2 5 6]])
 
 (-> v z/vector-zip z/down z/node)
-(-> v z/vector-zip)
+(-> v z/vector-zip z/node)
 
-
+(defn blank? [s]
+  (every? #(Character/isWhitespace %) s))
