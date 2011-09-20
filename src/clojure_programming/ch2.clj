@@ -34,3 +34,25 @@
 
 (defn blank? [s]
   (every? #(Character/isWhitespace %) s))
+
+
+(defn fib
+  [current next n]
+  (if (zero? n)
+    current
+    (recur next (+ current next) (dec n))))
+
+(defn tail-fibo [n]
+  (letfn [(fib
+            [current next n]
+            (if (zero? n)
+              current
+              (fib next (+ current next) (dec n))))]
+    (fib 0N 1N n)))
+
+(defn sum
+  [& numbers]
+  (reduce + numbers))
+
+(sum 12 12 12 12)
+(apply sum '(12 12 12 12))
