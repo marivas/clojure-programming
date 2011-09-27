@@ -149,19 +149,20 @@
 (remove #{5 7 false} (cons false (range 10))) ; => (false 0 1 2 3 4 6
                                     ; 8 9)
 
-(let [s (range 1e6)] (time (count s)))
-(let [s (apply list (range 1e6))] (time (count s)))
+;;(let [s (range 1e6)] (time (count s)))
+;;(let [s (apply list (range 1e6))] (time (count s)))
 
 
 (def double (partial * 2))
-(take 10 (iterate double 1)) ; => (1 2 4 8 16 32 64 128 256 512)
+;;(take 10 (iterate double 1)) ; => (1 2 4 8 16 32 64 128 256 512)
 
 
-(let [[t d] (split-with #(< % 12) (range 1e8))]
-  [(count d) (count t)])
+                                        
+;; (let [[t d] (split-with #(< % 12) (range 1e8))]
+;;   [(count d) (count t)])
 ;; =>#<OutOfMemoryError java.lang.OutOfMemoryError: Java heap space> =>
 
-(let [[t d] (split-with #(< % 12) (range 1e8))]
-  [(count t) (count d)])
+;; (let [[t d] (split-with #(< % 12) (range 1e8))]
+;;   [(count t) (count d)])
 ;; => [12 99999988]
 
